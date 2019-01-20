@@ -20,8 +20,10 @@ short_s="5"
 #  speed will be set
 # You can make the array as big or as small as you require, as long as they
 #  both end up being the same size
-declare -a fcurve=( "20" "30" "45" "50" "55" ) # fan speeds
-declare -a tcurve=( "35" "40" "45" "50" "55" ) # temperatures
+# this use is meant for a 75W power limit with
+# sudo nvidia-smi -pm 1 && sudo nvidia-smi -pl 75 && nvidia-smi -i 0 -q -d POWER,CLOCK && cd ~/nfancurve-patch-2 && sudo ./temp.sh
+declare -a fcurve=( "20" "30" "45" "50" "52" "55" "60" "70" "75") # fan speeds
+declare -a tcurve=( "35" "40" "45" "50" "52" "55" "60" "80" "100") # temperatures
 
 # These two arrays are for GPU's that have a secondary fan that you may wish
 #  to control seperately, especially if it is water-cooled.
