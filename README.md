@@ -37,6 +37,12 @@ If you need any help configuring my script or don't know how to make it start au
 - Make sure `CoolBits` is enabled (see [USAGE.md](USAGE.md))
 - Run `./temp.sh` for a foreground process, or `./update.sh` for a background* one
 
+example for my use : 
+
+```
+sudo nvidia-smi -pm 1 && sudo nvidia-smi -pl 75 && nvidia-smi -i 0 -q -d POWER,CLOCK && cd ~/nfancurve-patch-2 && sudo ./temp.sh
+```
+
 ### git
 - Choose a folder you want to download/install the script in
 - `git clone https://github.com/nan0s7/nfancurve`
